@@ -11,7 +11,7 @@ class SurfaceReconstruction(metaclass=SingletonMeta):
     _types = {
       'pymeshlab': PyMeshlabSurface,
       #'open3d': Open3dSurface,
-      #'default': Open3dSurface
+      'default': PyMeshlabSurface
     }
 
     def __new__(cls, *args, **kwargs) -> Type[TStrategy]:
