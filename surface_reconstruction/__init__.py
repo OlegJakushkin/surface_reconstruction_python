@@ -7,7 +7,7 @@ from .pymeshlab_surface import PyMeshlabSurface
 __all__ = [
   "SingletonMeta",
   "SurfaceStrategy",
-  "Open3dSurface",
+  #"Open3dSurface",
   "PyMeshlabSurface",
   "SurfaceReconstruction"
 ]
