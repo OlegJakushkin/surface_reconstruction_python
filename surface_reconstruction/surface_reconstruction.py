@@ -2,7 +2,7 @@ from typing import Type, TypeVar
 from .singleton_meta import SingletonMeta
 from .surface_strategy import SurfaceStrategy
 from .pymeshlab_surface import PyMeshlabSurface
-from .open3d_surface import Open3dSurface
+#from .open3d_surface import Open3dSurface
 
 TStrategy = TypeVar('TStrategy', bound=SurfaceStrategy)
 
@@ -10,8 +10,8 @@ TStrategy = TypeVar('TStrategy', bound=SurfaceStrategy)
 class SurfaceReconstruction(metaclass=SingletonMeta):
     _types = {
       'pymeshlab': PyMeshlabSurface,
-      'open3d': Open3dSurface,
-      'default': Open3dSurface
+      #'open3d': Open3dSurface,
+      #'default': Open3dSurface
     }
 
     def __new__(cls, *args, **kwargs) -> Type[TStrategy]:
